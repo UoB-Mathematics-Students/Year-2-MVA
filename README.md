@@ -1,5 +1,5 @@
 Multivariable and Vector Analysis
-===========
+=================================
 
 Introduction
 ------------
