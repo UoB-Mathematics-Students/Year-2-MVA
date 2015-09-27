@@ -11,4 +11,4 @@ What can I find here?
 -----------------------
 You find find cheatsheets, notes, links, ideas, and anything else that has been contributed.
 
-[main-repo]: https://github.com/UoB-Mathematics/UoB-Mathematics-Students
+[main-repo]: https://github.com/UoB-Mathematics-Students/UoB-Mathematics
