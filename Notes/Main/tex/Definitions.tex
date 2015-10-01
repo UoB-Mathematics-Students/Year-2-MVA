@@ -15,7 +15,7 @@
 
 \section{Partial Differentiation}
 \begin{mydef}
-\normalfont The function \(f : \real^3 \to \real\) is said to have a partial derivative with respect to \(x\) at the point \((x_0, y_0, z_0\) if the following limit exists
+\normalfont The function \(f : \real^3 \to \real\) is said to have a partial derivative with respect to \(x\) at the point \((x_0, y_0, z_0)\) if the following limit exists
 %
 \[\lim_{\Delta x \to 0}{\frac{f(x_0 + \Delta x, y_0, z_0) - f(x_0, y_0, z_0)}{\Delta x}}\]
 %
@@ -24,6 +24,56 @@ which is called the \textbf{partial derivative} of \(f\) with respect to \(x\) a
 \[\frac{\partial f(x_0, y_0, z_0)}{\partial x} \equiv \lim_{\Delta x \to 0}{\frac{f(x_0 + \Delta x, y_0, z_0) - f(x_0, y_0, z_0)}{\Delta x}}\]
 \end{mydef}
 
+\paragraph{Geometric interpretation of partial derivative} The partial derivative 
+\(f_x(a,b)\) is the slope of the tangent line to the curve \(f(x, b)\) at \(x = a\).
+
+\begin{mythm}\normalfont
+When a function has the second order continuous partial derivatives, the partial derivations of this function do not depend on the order with respect to the variables.
+\end{mythm}
+
+\section{L'Hospital's rule}
+\begin{mythm}
+\normalfont Let \(\lim{}\) stand for the limit of \(\lim_{x\to c}, \lim_{x\to +\infty}, \lim_{x\to -\infty}\)
+
+If \(\lim{\frac{f'(x)}{g'(x)}}\) has a finite value or if the limit is \(\pm\infty\) then \(\lim{\frac{f(x)}{g(x)}} = \lim{\frac{f'(x)}{g'(x)}}\)
+\end{mythm}
+
+\section{Order of variables}
+\subsection{Big-O notation}
+\begin{mythm}
+\normalfont Let \(\lim{}\) stand for the limit of: \(\lim_{x\to c}, \lim_{x\to+\infty}, \lim{x\to-\infty}\)
+
+\[\lim{\frac{f(x)}{g(x)}=k}, k\ne 0, \text{ if and only if } f(x)=O(g(x))\]
+\end{mythm}
+
+\subsection{Little-o notation}
+\begin{mythm}
+\normalfont Let \(\lim{}\) stand for the limit of: \(\lim_{x\to c}, \lim_{x\to+\infty}, \lim_{x\to-\infty}\)
+
+\[\lim{\frac{f(x)}{g(x)} = 0} \text{ if and only if } f(x) = o(g(x))\]
+\end{mythm}
+
+\section{Differentiable function of a single variable}
+\begin{mythm}
+\normalfont The function \(y=f(x)\) is called differentiable at \(x_0\) if
+\[y-y_0 = f_x(x_0)(x-x_0) + o(x-x_0)\]
+or
+\[\Delta y = f_x(x_0)\Delta x + o(\Delta x)\]
+
+we have
+\[y - y_0 \approx f_x(x_0)(x-x_0)\]
+\end{mythm}
+
+\section{Differentiable functions with two variables}
+\begin{mythm}\normalfont
+The function \(z = f(x,y)\) is called differentiable at \((x_0, y_0)\) if
+\[\Delta z = f_x(x_0, y_0)\Delta x + f_y(x_0, y_0)\Delta y + o(\rho)\]
+or
+\[z-z_0=f_x(x_0,y_0)(x-x_0)+f_y(x_0,y_0)(y-y_0)+o(\rho)\]
+
+\textit{It is the equation for the tangent plane of the surface \(z = f(x,y)\) at \((x_0,y_0)\)}
+\end{mythm}
+
 \section{Differentiable Function}
 \begin{mydef}
 \normalfont The function \(f(x, y, z)\) is called differentiable at \((x_0, y_0, z_0)\) if \(\Delta f = f(x, y, z) - f(x_0, y_0, z_0)\) can be expressed as
@@ -31,6 +81,9 @@ which is called the \textbf{partial derivative} of \(f\) with respect to \(x\) a
 \[\Delta f = f_x(x_0,y_0,z_0)\Delta x + f_y(x_0,y_0,z_0)\Delta y + f_z(x_0,y_0,z_0)\Delta z + o(\rho)\]
 %
 where \(\Delta x = x - x_0\), \(\Delta y = y - y_0\), \(\Delta z = z - z_0\), and \(\rho = \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}\).
+
+As \(\rho\) is infinitely small, we have
+\[df = f_x(x_0,y_0,z_0)dx + f_y(x_0,y_0,z_0) + f_z(x_0,y_0,z_0)dz\]
 \end{mydef}
 
 \begin{mydef}
@@ -47,6 +100,8 @@ If \(f\) and \(x_j\) are sufficiently smooth, then
 \[\frac{\partial f}{\partial t_i} = \frac{\partial f}{\partial x_1}\frac{\partial x_1}{\partial t_i} + \frac{\partial f}{\partial x_2}\frac{\partial x_2}{\partial t_i} + \hdots + \frac{\partial f}{\partial x_n}\frac{\partial x_n}{\partial t_i}, i = 1,2,\hdots, m\]
 %
 \end{mydef}
+
+
 
 \pagenumbering{arabic}
 
